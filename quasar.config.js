@@ -12,6 +12,12 @@ export default defineConfig((/* ctx */) => {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [
+      'apex-charts import {boot} from \'quasar/wrappers\';\n' +
+      'import VueApexCharts from \'vue3-apexcharts\'\n' +
+      'export default boot(({ app }) => {\n' +
+      '  app.use(VueApexCharts);\n' +
+      '});'
+
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
@@ -58,7 +64,7 @@ export default defineConfig((/* ctx */) => {
 
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
-      
+
       // vitePlugins: [
       //   [ 'package-name', { ..pluginOptions.. }, { server: true, client: true } ]
       // ]
