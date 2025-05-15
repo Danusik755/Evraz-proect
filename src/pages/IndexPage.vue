@@ -68,7 +68,7 @@
         <q-card-section class="card">
           <div class="text-h6">ИСТОЧНИКИ СДЕЛОК</div>
           <div class="flex flex-center">
-            <apexchart type="radialBar"  width='325' :options="options2" :series="series2"/>
+            <apexchart type="radialBar"  width='325' :options="options3" :series="series3"/>
           </div>
         </q-card-section>
       </q-card>
@@ -111,6 +111,35 @@
         <div class="text-subtitle1">за неделю</div>
       </q-card-section>
     </q-card>
+    <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
+      <q-card-section>
+      <div>
+        <div class="text-h5">исходящие сообщения по менеджерам</div>
+        <div style="display:flex;justify-content: flex-end;"class="text-number42" >0</div>
+        <div
+          style="display:flex;justify-content: flex-end;"
+          class="text-subtitle1">за неделю</div>
+      </div>
+        <div style="width: 20%">
+<hr>
+
+  </div>
+
+
+
+
+        </q-card-section>
+    </q-card>
+
+    <q-card-section>
+      <apexchart type="line"          width='1000' height="500" :options="options3" :series="series3"/>
+    </q-card-section>
+
+
+
+
+
+
 
     <q-card flat  class="my-card">
       <q-card-section>
@@ -189,6 +218,45 @@ let options2= ref({
     }
   }]
 })
+
+
+
+
+let series3 = ref([{
+  name: "Desktops",
+  data: [0, 15, 30, ]
+}])
+
+let options3= ref({
+  chart: {
+    width: 500,
+    height: 500,
+    type: 'line',
+    zoom: {
+      enabled: false
+    }
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    curve: 'straight'
+  },
+  title: {
+    text: 'Product Trends by Month',
+    align: 'left'
+  },
+  grid: {
+    row: {
+      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+      opacity: 0.5
+    },
+  },
+  xaxis: {
+    categories: ['сделок в работе сейчас', 'по прошествии 5 дней ' ,'Mar', ],
+
+  }
+})
 </script>
 
 <style scoped>
@@ -200,6 +268,10 @@ let options2= ref({
 }
 .text-number4 {
   opacity: 20%;
+}
+.text-number42 {
+  opacity: 20%;
+
 }
 .text-number3 {
   opacity: 20%;
@@ -219,6 +291,16 @@ let options2= ref({
   margin-right: 10px;
   align-items: center;
 }
+.bg-dark1 {
+  //line-height: 120px;
+  font-size: 40px;
+
+  margin-top: 60px;
+  width: 500px;
+  height: 500px;
+  margin-right: 10px;
+  align-items: center;
+}
 .div {
     opacity: 20% ;
   }
@@ -229,6 +311,10 @@ let options2= ref({
 
 .text-subtitle2 {
   font-size: 10pt;
+}
+.text-subtitle1 {
+  font-size: 10pt;
+  opacity: 50%;
 }
 
 .textnumber {
