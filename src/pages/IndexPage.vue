@@ -57,7 +57,7 @@
         <div class="textnumber">3506</div>
         <div
           style="font-weight: bold"
-          class="textnumber3">50 000 ₽
+          class="textnumber11">50 000 ₽
         </div>
         <div style="width: 50%;">
           <hr>
@@ -89,7 +89,7 @@
         <div class="textnumber">3516</div>
         <div
           style="font-weight: bold"
-          class="textnumber3">50 000 ₽
+          class="textnumber11">50 000 ₽
         </div>
         <div style='width: 50%;'>
           <hr>
@@ -151,7 +151,7 @@
         </div>
         <div
           style="margin-bottom: 10px"
-          class="row q-gutter-xs">
+          class="row q-gutter-xs  ">
           <div class="textnumber6">Другие</div>
           <div style="font-weight: bold"> 32 сделок</div>
           <div
@@ -170,6 +170,9 @@
         style="width: 400px"
         class="card">
         <div class="text-h6">ЦЕЛИ</div>
+        <div class="flex flex-center">
+          <apexchart type="radialBar" width='325' :options="options3" :series="series3"/>
+        </div>
       </q-card-section>
     </q-card>
     <q-card
@@ -179,7 +182,27 @@
       <q-card-section
         style="width: 400px"
         class="card">
-        <div class="text-h6">ИСПОЛЬЗОВАНИЕ СИСТЕМЫ ЗА НЕДЕЛЮ</div>
+        <div
+          class="text-h6">ИСПОЛЬЗОВАНИЕ СИСТЕМЫ ЗА НЕДЕЛЮ</div>
+        <div
+          style="display: flex; justify-content: flex-end"
+          class="textnumber20">За неделю
+        </div>
+          <div
+            style="margin-top: 20px"
+            class="row q-gutter-xs">
+        <div>Admin CRM</div>
+        <div
+          style="font-weight: bold"
+          class="row q-gutter-xs"></div>
+        <div  style="font-weight: bold">0 м.</div>
+        <q-linear-progress :value="0" color="yellow" class="line"></q-linear-progress>
+        <div  class="row q-gutter-xs">Валерий Богинский</div>
+        <div
+          style="font-weight: bold"
+          class="row q-gutter-xs">0 м.</div>
+        <q-linear-progress :value="0" color="yellow" class="line"></q-linear-progress>
+          </div>
       </q-card-section>
     </q-card>
     <q-card
@@ -255,7 +278,58 @@ let series2 = ref([100, 100])
 
 let options2 = ref({
   chart: {
-    height: 390,
+    width: 390,
+    type: 'radialBar',
+  },
+  plotOptions: {
+    radialBar: {
+      offsetY: 0,
+      startAngle: 0,
+      endAngle: 270,
+      hollow: {
+        margin: 5,
+        size: '30%',
+        background: 'transparent',
+        image: undefined,
+      },
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          show: false,
+        }
+      },
+      barLabels: {
+        enabled: true,
+        useSeriesColors: true,
+        offsetX: -8,
+        fontSize: '8px',
+
+        fontWeight: 600,
+        formatter: function (seriesName, opts) {
+          return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+        },
+      },
+    }
+  },
+  colors: ['#35a2ff', '#35a2ff'],
+  labels: ['ИНТЕГРАЦИИ С САЙТОМ ВДЕЛО', 'ВИРТУАЛЬНАЯ АТС МЕГАФОН'],
+  responsive: [{
+    breakpoint: 200,
+    options: {
+      legend: {
+        show: false
+      }
+    }
+  }]
+})
+
+let series3 = ref([100, 100,100,100,100])
+
+let options3 = ref({
+  chart: {
+    width: 390,
     type: 'radialBar',
   },
   plotOptions: {
@@ -318,21 +392,23 @@ let options2 = ref({
 
 .text-number4 {
   opacity: 0.5;
+  color: mediumpurple;
 
 }
 
 .text-number3 {
   opacity: 0.5;
-
+  color: mediumpurple;
 }
 
 .text-number2 {
   opacity: 0.5;
+  color: mediumpurple;
 }
 
 .text-number1 {
   opacity: 0.5;
-
+  color: mediumpurple;
 }
 
 .bg-dark {
@@ -348,6 +424,7 @@ let options2 = ref({
 
 .div {
   opacity: 0.5;
+  color: mediumpurple;
 }
 
 .text-h6 {
@@ -367,6 +444,7 @@ let options2 = ref({
 .textnumber {
   font-size: 20pt;
   opacity: 0.5;
+  color: mediumpurple;
 }
 
 .textnumber2 {
@@ -376,6 +454,7 @@ let options2 = ref({
 
 .textnumber3 {
   font-size: 10pt;
+  color: mediumpurple;
 }
 
 .card {
