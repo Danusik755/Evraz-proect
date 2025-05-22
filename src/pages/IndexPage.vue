@@ -196,7 +196,7 @@
         class="card">
         <div class="text-h6">ЦЕЛИ</div>
         <div class="flex flex-center">
-          <apexchart type="radialBar" width='325' :options="options3" :series="series3"/>
+          <apexchart type="donut" height='325' width='340' :options="options3" :series="series3"/>
         </div>
       </q-card-section>
     </q-card>
@@ -218,6 +218,7 @@
           style="margin-top: 20px"
           class="row q-gutter-xs">
           <img
+            class="image"
             style="width:30px"
             src="https://avatars.mds.yandex.net/get-socsnippets/12856884/2a0000019158c1fcb75dc89d8e6c6fec8753/square_83">
           <div>Admin CRM</div>
@@ -230,6 +231,7 @@
           </div>
           <q-linear-progress :value="0" color="yellow" class="line"></q-linear-progress>
           <img
+            class="img"
             style="width:30px"
             src="https://avatars.mds.yandex.net/i?id=9f64755eec4927fe8ba29cbd5d1a3749d82fcdae-3590262-images-thumbs&n=13">
           <div class="row q-gutter-xs">Валерий Богинский</div>
@@ -252,7 +254,9 @@
         style="width: 400px"
         class="row-q-gutter-xs">
         <div class="text-h6">ПОСЛЕДНИЕ ФАЙЛЫ</div>
-        <div class="row q-mb-md">
+        <div
+          style="font-weight: bold"
+          class="row q-mb-md">
           <img
             style="width: 50px"
             src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
@@ -265,7 +269,9 @@
           class="row q-gutter-xs">
         </div>
 
-        <div class="row q-mb-md">
+        <div
+          style="font-weight: bold"
+          class="row q-mb-md">
           <img
             style="width: 50px"
             src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
@@ -278,7 +284,9 @@
           class="row q-gutter-xs">
         </div>
 
-        <div class="row q-mb-md">
+        <div
+          style="font-weight: bold"
+          class="row q-mb-md">
           <img
             style="width: 50px"
             src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
@@ -289,7 +297,9 @@
           style="font-weight: bold"
           class="row q-gutter-xs"></div>
 
-        <div class="row q-mb-md">
+        <div
+          style="font-weight: bold"
+          class="row q-mb-md">
           <img
             style="width: 50px"
             src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
@@ -301,7 +311,9 @@
           style="font-weight: bold"
           class="row q-gutter-xs"></div>
 
-        <div class="row q-mb-md">
+        <div
+          style="font-weight: bold"
+          class="row q-mb-md">
           <img
             style="width: 50px"
             src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
@@ -313,7 +325,9 @@
           style="font-weight: bold"
           class="row q-gutter-xs"></div>
 
-        <div class="row q-mb-md">
+        <div
+          style="font-weight: bold"
+          class="row q-mb-md">
           <img
             style="width: 50px"
             src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
@@ -437,55 +451,100 @@ let options2 = ref({
   }]
 })
 
-let series3 = ref([100, 100, 100, 100, 100])
+let series3 = ref([25, 25, 25, 25])
 
 let options3 = ref({
   chart: {
-    width: 390,
-    type: 'radialBar',
+    height: 350,
+    type: 'donut',
+    toolbar: { show: false }
   },
+  colors: ['#8B0000', '#FF8C00', '#FFFF99', 'lime '], // Цвета для каждой зоны
   plotOptions: {
-    radialBar: {
-      offsetY: 0,
-      startAngle: 0,
-      endAngle: 270,
-      hollow: {
-        margin: 5,
-        size: '30%',
-        background: 'transparent',
-        image: undefined,
-      },
-      dataLabels: {
-        name: {
-          show: false,
-        },
-        value: {
-          show: false,
+    pie: {
+      donut: {
+        size: '65%', // Размер центрального отверстия
+        labels: {
+          show: false // Отключаем метки в центре
         }
       },
-      barLabels: {
-        enabled: true,
-        useSeriesColors: true,
-        offsetX: -8,
-        fontSize: '8px',
-
-        fontWeight: 600,
-        formatter: function (seriesName, opts) {
-          return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
-        },
-      },
-    }
-  },
-  colors: ['#35a2ff', '#35a2ff'],
-  labels: ['ИНТЕГРАЦИИ С САЙТОМ ВДЕЛО', 'ВИРТУАЛЬНАЯ АТС МЕГАФОН'],
-  responsive: [{
-    breakpoint: 200,
-    options: {
-      legend: {
-        show: false
+      startAngle: -90, // Начало дуги
+      endAngle: 90,   // Конец дуги (полукруг),
+      dataLabels: {
+        offset: 40,
       }
     }
-  }]
+  },
+  labels: ['25%','50%', '75%', "100%"],
+  dataLabels: {
+    offsetY: 50,
+    formatter: function (val,opts) {
+      return opts.w.config.labels[opts.seriesIndex]
+    },
+    dropShadow: false,
+    style: {
+      fontSize: '12px',
+      colors:['#fff'],
+      top: '50px'
+    }
+  },
+  legend: {
+    show: false // Отключаем легенду
+  },
+  // Кастомные метки для 25%, 50%, 75%, 100%
+  annotations: {
+    points: [
+      {
+        x: -135,
+        y: 25,
+        marker: { size: 0 },
+        label: {
+          borderColor: '#777',
+          offsetY: -20,
+          offsetX: -30,
+          style: { color: '#777', background: '#fff' },
+          text: '25%'
+        }
+      },
+      {
+        x: -45,
+        y: 50,
+        marker: { size: 0 },
+        label: {
+          borderColor: '#777',
+          offsetY: -30,
+          style: { color: '#777', background: '#fff' },
+          text: '50%'
+        }
+      },
+      {
+        x: 45,
+        y: 75,
+        marker: { size: 0 },
+        label: {
+          borderColor: '#777',
+          offsetY: -30,
+          style: { color: '#777', background: '#fff' },
+          text: '75%'
+        }
+      },
+      {
+        x: 135,
+        y: 100,
+        marker: { size: 0 },
+        label: {
+          borderColor: '#777',
+          offsetY: -20,
+          offsetX: 30,
+          style: { color: '#777', background: '#fff' },
+          text: '100%'
+        }
+      }
+    ]
+  },
+  tooltip: {
+    enabled: false // Отключаем всплывающие подсказки
+  }
 })
 </script>
 
@@ -514,24 +573,24 @@ let options3 = ref({
 }
 
 .text-number4 {
-  opacity: 0.5;
+  opacity: 0.3;
   color: mediumpurple;
 
 }
 
 .text-number3 {
-  opacity: 0.5;
-  color: mediumpurple;
+  opacity: 0.3;
+  color: limegreen;
 }
 
 .text-number2 {
-  opacity: 0.5;
-  color: mediumpurple;
+  opacity: 0.3;
+  color: limegreen;
 }
 
 .text-number1 {
-  opacity: 0.5;
-  color: mediumpurple;
+  opacity: 0.3;
+  color: limegreen;
 }
 
 .bg-dark {
