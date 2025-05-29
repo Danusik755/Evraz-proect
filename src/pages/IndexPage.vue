@@ -141,24 +141,66 @@
 
 
 
-    <q-card flat  class="my-card">
+
+    <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
       <q-card-section>
+        <div class="text-h5">Обработанные беседы</div>
+        <div style="display:flex;justify-content: flex-end;" class="text-number42" >0</div>
+        <div
+          style="display:flex;justify-content: flex-end;"
+          class="text-subtitle1">за неделю
+        </div>
+        <div style="width: 20%">
+          <hr>
+
+        </div>
       </q-card-section>
-      <q-card>
-
-
-
-
-      </q-card>
-
-
-
-
-
-
-
     </q-card>
+
+
+
+
+        <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
+          <q-card-section>
+            <div>
+            <div class="text-h5">Входящиесообщения</div>
+            <div style="display:flex;justify-content: flex-end;" class="text-number42" >0</div>
+            <div
+              style="display:flex;justify-content: flex-end;"
+              class="text-subtitle1">за неделю
+            </div>
+            <div style="width: 20%">
+              <hr style="opacity: 5%; height: auto">
+            </div>
+            </div>
+          </q-card-section>
+        </q-card>
+    <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
+      <q-card-section>
+        <div>
+          <div class="text-h5">Среднее время ответа</div>
+          <div style="width: 20%">
+          </div>
+        </div>
+      </q-card-section>
+    </q-card>
+
   </div>
+  <q-card style="background: #1D1D1D; height: auto;" class="bg-dark1 text-white my-card">
+    <q-card-section>
+      <div>
+        <div class="text-h5">индекс потребительской лояльности(NPS)</div>
+        </div>
+        <div style="width: 20%">
+          <hr style="opacity: 5%">
+        </div>
+
+      <apexchart type="radialBar" height="350" :options="options4" :series="series4"></apexchart>
+      <div>
+      <div class="text-h5" style="opacity: 5%">*NPS позволяет оценить уровень удовлетворенности клиентов Формула расчета: %Сторонников - % Критков</div>
+    </div>
+    </q-card-section>
+  </q-card>
 </template>
 
 
@@ -168,6 +210,25 @@
 import { ref } from 'vue';
 
 
+let options4 = {
+    chart: {
+      height: 200,
+      type: 'radialBar',
+    },
+    plotOptions: {
+      radialBar: {
+        hollow: {
+          size: '70%',
+        }
+      },
+    },
+    labels: ['NPS*'],
+  }
+
+let series4 = [70]
+
+// var chart = new ApexCharts(document.querySelector("#chart"), options);
+// chart.render();
 
 
 let series2 = ref([100,100])
@@ -229,6 +290,8 @@ let series3 = ref([{
 
 let options3= ref({
   chart: {
+
+    background: 'rgba(12,37,61,.95)',
     width: 500,
     height: 500,
     type: 'line',
@@ -240,26 +303,31 @@ let options3= ref({
     enabled: false
   },
   stroke: {
+    colors: [
+      'green'
+    ],
     curve: 'straight'
   },
   title: {
-    text: 'Product Trends by Month',
-    align: 'left'
+    text: 'прогноз продаж',
+    align: 'left',
+    color: '#666'
   },
   grid: {
     row: {
-      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
       opacity: 0.5
     },
   },
   xaxis: {
-    categories: ['сделок в работе сейчас', 'по прошествии 5 дней ' ,'Mar', ],
+
+    categories: ['сделок в работе сейчас', 'по прошествии 5 дней ' ,'  ' ],
 
   }
 })
 </script>
 
-<style scoped>
+<style>
 .text-number1 {
   font-size: 32px;
   font-weight: bold;
@@ -332,5 +400,9 @@ let options3= ref({
 }
 
 .card {
+}
+
+.apexcharts-grid-row {
+  fill: rgba(12,37,61,.95);
 }
 </style>
