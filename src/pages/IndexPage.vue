@@ -1,212 +1,343 @@
 <template>
-  <div class="row justify-center items-start q-gutter-md">
-    <q-card
-      class="my-card text-white"
-      style="background:rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="height:175px"
+  <div class="container">
+    <div class="row items-stretch q-col-gutter-md">
+      <div class="col-4 full-height">
+        <div class="row q-col-gutter-md full-height">
+          <div class="col-6">
+            <q-card
+              class="my-card text-white full-height"
+              style="background:rgba(12, 37, 61, .95)">
 
-        class="card">
-        <div class="text-h6">ПРОСРОЧЕННЫЕ ЗАДАЧИ</div>
-        <div class="textnumber">65</div>
-        <div
-          style="width: 50%;">
-          <hr>
-        </div>
-        <div class="textnumber2">0</div>
-        <div class="text-subtitle2">за неделю</div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      class="my-card text-white"
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="height:175px"
-        class="card">
-        <div class="text-h6">ВЫПОЛНЕННЫЕ ЗАДАЧИ</div>
-        <div class="textnumber">0</div>
-        <div class="text-subtitle2">за неделю</div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      class="my-card text-white"
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="height:175px"
-        class="card">
-        <div class="text-h6">ЗАДАЧИ К ВЫПОЛНЕНИЮ</div>
-        <div class="textnumber">75</div>
-        <div style="width: 50%;">
-          <hr>
-        </div>
-        <div class="textnumber2">+8</div>
-        <div class="text-subtitle2">за неделю</div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      class="my-card text-white"
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="height:175px"
-        class="card">
-        <div class="text-h6">СДЕЛОК БЕЗ ЗАДАЧ</div>
-        <div class="textnumber">3506</div>
-        <div
-          style="font-weight: bold"
-          class="textnumber11">50 000 ₽
-        </div>
-        <div style="width: 50%;">
-          <hr>
-        </div>
-        <div class="textnumber2">+8</div>
-        <div class="text-subtitle2">за неделю</div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      class="my-card text-white"
-      style="background: rgba(12, 37, 61, .95)"
-    >
+              <q-card-section class="card">
+                <div class="text-h6">ПРОСРОЧЕННЫЕ ЗАДАЧИ</div>
+                <div class="textnumber">52</div>
+                <div
+                  style="width: 50%;">
+                  <hr>
+                </div>
+                <div class="textnumber2">+2</div>
+                <div class="text-subtitle2">за неделю</div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="col-6">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)"
+            >
+              <q-card-section
+                class="card">
+                <div class="text-h6">ВЫПОЛНЕННЫЕ ЗАДАЧИ</div>
+                <div class="textnumber">3</div>
+                <div class="text-subtitle2">за неделю</div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="col-6">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)"
+            >
+              <q-card-section
+                class="card">
+                <div class="text-h6">ЗАДАЧИ К ВЫПОЛНЕНИЮ</div>
+                <div class="textnumber">83</div>
+                <div style="width: 50%;">
+                  <hr>
+                </div>
+                <div class="textnumber2">+7</div>
+                <div class="text-subtitle2">за неделю</div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="col-6">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)">
 
-      <q-card-section class="card">
-        <div class="text-h6">ИСТОЧНИКИ СДЕЛОК</div>
-        <div class="flex flex-center">
-          <apexchart type="radialBar" width='325' :options="options2" :series="series2"/>
+
+              <q-card-section
+                class="card">
+                <div class="text-h6">СДЕЛОК БЕЗ ЗАДАЧ</div>
+                <div class="textnumber">2894</div>
+                <div
+                  style="font-weight: bold"
+                  class="textnumber11">90 000 ₽
+                </div>
+                <div style="width: 50%;">
+                  <hr>
+                </div>
+                <div class="textnumber2">+9</div>
+                <div class="text-subtitle2">за неделю</div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
-      </q-card-section>
-    </q-card>
+      </div>
+      <div class="col-4">
+        <q-card
+          class="my-card text-white full-height"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+
+          <q-card-section class="card">
+            <div class="text-h6">ИСТОЧНИКИ СДЕЛОК</div>
+            <div class="flex flex-center">
+              <apexchart type="radialBar" width='325' :options="options2" :series="series2"/>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+
+      <div class="col-4">
+        <q-card
+          class="my-card text-white full-height"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section
+            class="card">
+            <div class="text-h6">СДЕЛКИ ПО МЕНЕДЖЕРАМ</div>
+            <div class="row justify-between">
+              <div>
+                <div class="textnumber">3516</div>
+                <div
+                  style="font-weight: bold"
+                  class="textnumber11">90 000 ₽
+                </div>
+              </div>
+
+              <div>
+                  <div
+                    class="textnumber2 text-right">+8
+                  </div>
+                  <div class="row-q-gutter-xs">за неделю</div>
+                </div>
+            </div>
+
+            <div style='width: 50%;'>
+              <hr>
+            </div>
+          </q-card-section>
+
+          <q-card-section>
+            <div style="margin-bottom: 10px">
+              <div class="row justify-between items-center q-mb-xs">
+                <div class="row items-center q-gutter-xs">
+                  <div class="textnumber6">Admin CRM</div>
+                  <div style="font-weight: bold">3055 сделок</div>
+                  <div
+                    style="opacity: 0.3"
+                    class="textnumber3">(90 000 ₽)
+                  </div>
+                </div>
+
+                <div class="textnumber2">
+                  +6
+                </div>
+              </div>
+              <q-linear-progress :value="1" color="yellow" class="line"></q-linear-progress>
+            </div>
+
+            <div style="margin-bottom: 10px">
+              <div class="row justify-between items-center q-mb-xs">
+                <div class="row items-center q-gutter-xs">
+                  <div class="textnumber6">Иван Седых</div>
+                  <div style="font-weight: bold">151 сделка</div>
+                  <div
+                    style="opacity: 0.3"
+                    class="textnumber3">(0 ₽)
+                  </div>
+                </div>
+
+                <div class="textnumber2">
+                  0
+                </div>
+              </div>
+              <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>
+            </div>
+
+            <div style="margin-bottom: 10px">
+              <div class="row justify-between items-center q-mb-xs">
+                <div class="row items-center q-gutter-xs">
+                  <div class="textnumber6"> Александр Михайлов</div>
+                  <div style="font-weight: bold">146 сделок</div>
+                  <div
+                    style="opacity: 0.3"
+                    class="textnumber3">(0 ₽)
+                  </div>
+                </div>
+
+                <div class="textnumber2">
+                  0
+                </div>
+              </div>
+              <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>
+
+            </div>
+            <div style="margin-bottom: 10px">
+              <div class="row justify-between items-center q-mb-xs">
+                <div class="row items-center q-gutter-xs">
+                  <div class="textnumber6"> Ксения Евдокимова</div>
+                  <div style="font-weight: bold">89 сделок</div>
+                  <div
+                    style="opacity: 0.3"
+                    class="textnumber3">(0 ₽)
+                  </div>
+                </div>
+
+                <div class="textnumber2">
+                  0
+                </div>
+              </div>
+              <q-linear-progress :value="0.02" color="yellow" class="line"></q-linear-progress>
+
+            </div>
+            <div style="margin-bottom: 10px">
+              <div class="row justify-between items-center q-mb-xs">
+                <div class="row items-center q-gutter-xs">
+                  <div class="textnumber6"> Елизавета Ткачева</div>
+                  <div style="font-weight: bold">43 сделки</div>
+                  <div
+                    style="opacity: 0.3"
+                    class="textnumber3">(0 ₽)
+                  </div>
+                </div>
+
+                <div class="textnumber2">
+                  0
+                </div>
+              </div>
+              <q-linear-progress :value="0.01" color="yellow" class="line"></q-linear-progress>
+
+            </div>
+            <div style="margin-bottom: 10px">
+              <div class="row justify-between items-center q-mb-xs">
+                <div class="row items-center q-gutter-xs">
+                  <div class="textnumber6"> Другие</div>
+                  <div style="font-weight: bold">32 сделки</div>
+                  <div
+                    style="opacity: 0.3"
+                    class="textnumber3">(0 ₽)
+                  </div>
+                </div>
+
+                <div class="textnumber2">
+                  0
+                </div>
+              </div>
+              <q-linear-progress :value="0.008" color="yellow" class="line"></q-linear-progress>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+
+
+
+
+  <!--            <div-->
+  <!--              style="margin-bottom: 10px"-->
+  <!--              class="row q-gutter-xs">-->
+  <!--              <div class="textnumber6">Иван Седых</div>-->
+  <!--              <div style="font-weight: bold"> 151 сделок</div>-->
+  <!--              <div-->
+  <!--                style="opacity: 0.3"-->
+  <!--                class="textnumber3">(0 ₽)-->
+  <!--              </div>-->
+  <!--              <div-->
+  <!--                class="textnumber2"-->
+  <!--                style="margin-left: 263px">0-->
+  <!--              </div>-->
+  <!--              <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>-->
+  <!--            </div>-->
+  <!--            <div-->
+  <!--              style="margin-bottom: 10px"-->
+  <!--              class="row q-gutter-xs">-->
+  <!--              <div class="textnumber6">Александр Михайлов</div>-->
+  <!--              <div style="font-weight: bold"> 146 сделок</div>-->
+  <!--              <div-->
+  <!--                style="opacity: 0.3"-->
+  <!--                class="textnumber3">(0 ₽)-->
+  <!--              </div>-->
+  <!--              <div-->
+  <!--                class="textnumber2"-->
+  <!--                style="margin-left: 196px">+2-->
+  <!--              </div>-->
+  <!--              <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>-->
+  <!--            </div>-->
+  <!--            <div-->
+  <!--              style="margin-bottom: 10px"-->
+  <!--              class="row q-gutter-xs">-->
+  <!--              <div class="textnumber6">Ксения Евдокимова</div>-->
+  <!--              <div style="font-weight: bold"> 89 сделок</div>-->
+  <!--              <div-->
+  <!--                style="opacity: 0.3"-->
+  <!--                class="textnumber3">(0 ₽)-->
+  <!--              </div>-->
+  <!--              <div-->
+  <!--                class="textnumber2"-->
+  <!--                style="margin-left: 220px">0-->
+  <!--              </div>-->
+  <!--              <q-linear-progress :value="0.02" color="yellow" class="line"></q-linear-progress>-->
+  <!--            </div>-->
+  <!--            <div-->
+  <!--              style="margin-bottom: 10px"-->
+  <!--              class="row q-gutter-xs">-->
+  <!--              <div class="textnumber6">Елизавета Ткачева</div>-->
+  <!--              <div style="font-weight: bold"> 43 сделок</div>-->
+  <!--              <div-->
+  <!--                style="opacity: 0.3"-->
+  <!--                class="textnumber3">(0 ₽)-->
+  <!--              </div>-->
+  <!--              <div-->
+  <!--                class="textnumber2"-->
+  <!--                style="margin-left: 224px">0-->
+  <!--              </div>-->
+  <!--              <q-linear-progress :value="0.01" color="yellow" class="line"></q-linear-progress>-->
+  <!--            </div>-->
+  <!--            <div-->
+  <!--              style="margin-bottom: 10px"-->
+  <!--              class="row q-gutter-xs  ">-->
+  <!--              <div class="textnumber6">Другие</div>-->
+  <!--              <div style="font-weight: bold"> 32 сделок</div>-->
+  <!--              <div-->
+  <!--                style="opacity: 0.3"-->
+  <!--                class="textnumber3">(0 ₽)-->
+  <!--              </div>-->
+  <!--              <div-->
+  <!--                class="textnumber2"-->
+  <!--                style="margin-left: 303px">0-->
+  <!--              </div>-->
+  <!--              <q-linear-progress :value="0.008" color="yellow" class="line"></q-linear-progress>-->
+  <!--            </div>-->
+  <!--          </q-card-section>-->
+  <!--        </q-card>-->
+  <!--      </div>-->
+
+  <div class="col-4">
     <q-card
-      class="my-card text-white"
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="width: 500px"
-        class="card">
-        <div class="text-h6">СДЕЛКИ ПО МЕНЕДЖЕРАМ</div>
-        <div class="textnumber">3516</div>
-        <div class="row justify-center items-start q-gutter-md">
-          <div
-            style="margin-left: 375px"
-            class="textnumber2">+8
-          </div>
-          <div class="row-q-gutter-xs">за неделю</div>
-        </div>
-        <div
-          style="font-weight: bold"
-          class="textnumber11">50 000 ₽
-        </div>
-        <div style='width: 50%;'>
-          <hr>
-        </div>
-        <div
-          style="margin-bottom: 10px"
-          class="row q-gutter-xs">
-          <div class="textnumber6">Admin CRM</div>
-          <div style="font-weight: bold">3055 сделок</div>
-          <div
-            style="opacity: 0.3"
-            class="textnumber3">(50 000 ₽)
-          </div>
-          <div
-            class="textnumber2"
-            style="margin-left: 220px">+6</div>
-          <q-linear-progress :value="1" color="yellow" class="line"></q-linear-progress>
-        </div>
-        <div
-          style="margin-bottom: 10px"
-          class="row q-gutter-xs">
-          <div class="textnumber6">Иван Седых</div>
-          <div style="font-weight: bold"> 151 сделок</div>
-          <div
-            style="opacity: 0.3"
-            class="textnumber3">(0 ₽)
-          </div>
-          <div
-            class="textnumber2"
-            style="margin-left: 263px">0</div>
-          <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>
-        </div>
-        <div
-          style="margin-bottom: 10px"
-          class="row q-gutter-xs">
-          <div class="textnumber6">Александр Михайлов</div>
-          <div style="font-weight: bold"> 146 сделок</div>
-          <div
-            style="opacity: 0.3"
-            class="textnumber3">(0 ₽)
-          </div>
-          <div
-            class="textnumber2"
-            style="margin-left: 196px">+2</div>
-          <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>
-        </div>
-        <div
-          style="margin-bottom: 10px"
-          class="row q-gutter-xs">
-          <div class="textnumber6">Ксения Евдокимова</div>
-          <div style="font-weight: bold"> 89 сделок</div>
-          <div
-            style="opacity: 0.3"
-            class="textnumber3">(0 ₽)
-          </div>
-          <div
-            class="textnumber2"
-            style="margin-left: 220px">0</div>
-          <q-linear-progress :value="0.02" color="yellow" class="line"></q-linear-progress>
-        </div>
-        <div
-          style="margin-bottom: 10px"
-          class="row q-gutter-xs">
-          <div class="textnumber6">Елизавета Ткачева</div>
-          <div style="font-weight: bold"> 43 сделок</div>
-          <div
-            style="opacity: 0.3"
-            class="textnumber3">(0 ₽)
-          </div>
-          <div
-            class="textnumber2"
-            style="margin-left: 224px">0</div>
-          <q-linear-progress :value="0.01" color="yellow" class="line"></q-linear-progress>
-        </div>
-        <div
-          style="margin-bottom: 10px"
-          class="row q-gutter-xs  ">
-          <div class="textnumber6">Другие</div>
-          <div style="font-weight: bold"> 32 сделок</div>
-          <div
-            style="opacity: 0.3"
-            class="textnumber3">(0 ₽)
-          </div>
-          <div
-            class="textnumber2"
-            style="margin-left: 303px">0</div>
-          <q-linear-progress :value="0.008" color="yellow" class="line"></q-linear-progress>
-        </div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      class="my-card text-white"
+      class="my-card text-white "
       style="background: rgba(12, 37, 61, .95)"
     >
       <q-card-section
         style="width: 400px"
-        class="card">
+        class="card3">
         <div class="text-h6">ЦЕЛИ</div>
         <div class="flex flex-center">
           <apexchart type="donut" height='325' width='340' :options="options3" :series="series3"/>
+          <div class="arrow"></div>
         </div>
       </q-card-section>
     </q-card>
+  </div>
+
+  <div class="col-4 ">
     <q-card
-      class="my-card text-white"
+      class="my-card text-white full-height"
       style="background: rgba(12, 37, 61, .95)"
     >
       <q-card-section
         style="width: 400px"
-        class="card">
+        class="card4">
         <div
           class="text-h6">ИСПОЛЬЗОВАНИЕ СИСТЕМЫ ЗА НЕДЕЛЮ
         </div>
@@ -225,9 +356,9 @@
           <div
             style="font-weight: bold"
             class="row q-gutter-xs"></div>
-          <div style="font-weight: bold">0 м.</div>
+          <div style="font-weight: bold">7 м.</div>
           <div
-            class="text11">18 м.
+            class="text11">28 м.
           </div>
           <q-linear-progress :value="0" color="yellow" class="line"></q-linear-progress>
           <img
@@ -237,17 +368,20 @@
           <div class="row q-gutter-xs">Валерий Богинский</div>
           <div
             style="font-weight: bold"
-            class="row q-gutter-xs">0 м.
+            class="row q-gutter-xs">2 м.
           </div>
           <div
-            class="text12">10 м.
+            class="text12">13 м.
           </div>
           <q-linear-progress :value="0" color="black" class="line"></q-linear-progress>
         </div>
       </q-card-section>
     </q-card>
+  </div>
+
+  <div class="col-4">
     <q-card
-      class="my-card text-white"
+      class="my-card text-white full-height"
       style="background: rgba(12, 37, 61, .95)"
     >
       <q-card-section
@@ -335,63 +469,164 @@
           >
           База данных "ЕВРАЗ"
         </div>
-        <div
-          style="font-weight: bold"
-          class="row q-gutter-xs">
-        </div>
       </q-card-section>
     </q-card>
-    <q-card bordered class="bg-dark text-white my-card">
-      <q-card-section style="background: rgba(12, 37, 61, .95)">
-        <div class="text-h5">ВХОДЯЩИЕ ЗВОНКИ</div>
-        <div class="text-number1">5</div>
-        <div class="text-subtitle3">за неделю</div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      style="background: rgba(12, 37, 61, .95)"
-      class="bg-dark text-white my-card">
-      <q-card-section style="background: rgba(12, 37, 61, .95)">
-        <div class="text-h5">ИСХОДЯЩИЕ ЗВОНКИ</div>
-        <div class="text-number2">5</div>
-        <div class="text-subtitle4">за неделю</div>
-      </q-card-section>
-    </q-card>
-    <q-card
-      style="background: rgba(12, 37, 61, .95)"
-      class="bg-dark text-white my-card">
-      <q-card-section style="background: rgba(12, 37, 61, .95)">
-        <div class="text-h5">ПРИМЕЧАНИЙ</div>
-        <div class="text-number3">5</div>
-        <div class="text-subtitle3">за неделю</div>
-      </q-card-section>
-    </q-card>
-
-    <q-card class="bg-dark text-white my-card">
-      <q-card-section style="background: rgba(12, 37, 61, .95)">
-        <div class="text-h5">УСПЕШНЫЕ СДЕЛКИ</div>
-        <div class="text-number4">3082</div>
-        <div class="text-subtitle4"></div>
-        <div style="font-size:25px">0р</div>
-        <div style="width: 50%;">
-          <hr>
-        </div>
-        <div class="text-number10 " style="font-size: 30px">+10</div>
-        <div class="text-subtitle1">за неделю</div>
-      </q-card-section>
-    </q-card>
+  </div>
 
 
-    <q-card flat class="my-card">
-      <q-card-section>
-      </q-card-section>
-      <q-card>
+  <!--  <div class="row justify-center items-start q-gutter-md">-->
+
+  <!--    -->
+  <!--    -->
 
 
-      </q-card>
+  <!--    <q-card-->
+  <!--      class="my-card text-white"-->
+  <!--      style="background: rgba(12, 37, 61, .95)"-->
+  <!--    >-->
+  <!--      <q-card-section-->
+  <!--        style="width: 400px"-->
+  <!--        class="row-q-gutter-xs">-->
+  <!--        <div class="text-h6">ПОСЛЕДНИЕ ФАЙЛЫ</div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-mb-md">-->
+  <!--          <img-->
+  <!--            style="width: 50px"-->
+  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
+  <!--            class="q-mr-sm"-->
+  <!--          >-->
+  <!--          Доходы "ЕВРАЗ"-->
+  <!--        </div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-gutter-xs">-->
+  <!--        </div>-->
+
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-mb-md">-->
+  <!--          <img-->
+  <!--            style="width: 50px"-->
+  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
+  <!--            class="q-mr-sm"-->
+  <!--          >-->
+  <!--          Задачи "ЕВРАЗ"-->
+  <!--        </div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-gutter-xs">-->
+  <!--        </div>-->
+
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-mb-md">-->
+  <!--          <img-->
+  <!--            style="width: 50px"-->
+  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
+  <!--            class="q-mr-sm">-->
+  <!--          Работники "ЕВРАЗ"-->
+  <!--        </div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-gutter-xs"></div>-->
+
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-mb-md">-->
+  <!--          <img-->
+  <!--            style="width: 50px"-->
+  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
+  <!--            class="q-mr-sm"-->
+  <!--          >-->
+  <!--          Важная информация "ЕВРАЗ"-->
+  <!--        </div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-gutter-xs"></div>-->
+
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-mb-md">-->
+  <!--          <img-->
+  <!--            style="width: 50px"-->
+  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
+  <!--            class="q-mr-sm"-->
+  <!--          >-->
+  <!--          Секреты "ЕВРАЗ"-->
+  <!--        </div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-gutter-xs"></div>-->
+
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-mb-md">-->
+  <!--          <img-->
+  <!--            style="width: 50px"-->
+  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
+  <!--            class="q-mr-sm"-->
+  <!--          >-->
+  <!--          База данных "ЕВРАЗ"-->
+  <!--        </div>-->
+  <!--        <div-->
+  <!--          style="font-weight: bold"-->
+  <!--          class="row q-gutter-xs">-->
+  <!--        </div>-->
+  <!--      </q-card-section>-->
+  <!--    </q-card>-->
+  <!--    <q-card bordered class="bg-dark text-white my-card">-->
+  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
+  <!--        <div class="text-h5">ВХОДЯЩИЕ ЗВОНКИ</div>-->
+  <!--        <div class="text-number1">5</div>-->
+  <!--        <div class="text-subtitle3">за неделю</div>-->
+  <!--      </q-card-section>-->
+  <!--    </q-card>-->
+  <!--    <q-card-->
+  <!--      style="background: rgba(12, 37, 61, .95)"-->
+  <!--      class="bg-dark text-white my-card">-->
+  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
+  <!--        <div class="text-h5">ИСХОДЯЩИЕ ЗВОНКИ</div>-->
+  <!--        <div class="text-number2">5</div>-->
+  <!--        <div class="text-subtitle4">за неделю</div>-->
+  <!--      </q-card-section>-->
+  <!--    </q-card>-->
+  <!--    <q-card-->
+  <!--      style="background: rgba(12, 37, 61, .95)"-->
+  <!--      class="bg-dark text-white my-card">-->
+  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
+  <!--        <div class="text-h5">ПРИМЕЧАНИЙ</div>-->
+  <!--        <div class="text-number3">5</div>-->
+  <!--        <div class="text-subtitle3">за неделю</div>-->
+  <!--      </q-card-section>-->
+  <!--    </q-card>-->
+
+  <!--    <q-card class="bg-dark text-white my-card">-->
+  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
+  <!--        <div class="text-h5">УСПЕШНЫЕ СДЕЛКИ</div>-->
+  <!--        <div class="text-number4">3082</div>-->
+  <!--        <div class="text-subtitle4"></div>-->
+  <!--        <div style="font-size:25px">0р</div>-->
+  <!--        <div style="width: 50%;">-->
+  <!--          <hr>-->
+  <!--        </div>-->
+  <!--        <div class="text-number10 " style="font-size: 30px">+10</div>-->
+  <!--        <div class="text-subtitle1">за неделю</div>-->
+  <!--      </q-card-section>-->
+  <!--    </q-card>-->
 
 
-    </q-card>
+  <!--    <q-card flat class="my-card">-->
+  <!--      <q-card-section>-->
+  <!--      </q-card-section>-->
+  <!--      <q-card>-->
+
+
+  <!--      </q-card>-->
+
+
+  <!--    </q-card>-->
+    </div>
   </div>
 </template>
 
@@ -457,7 +692,7 @@ let options3 = ref({
   chart: {
     height: 350,
     type: 'donut',
-    toolbar: { show: false }
+    toolbar: {show: false}
   },
   colors: ['#8B0000', '#FF8C00', '#FFFF99', 'lime '], // Цвета для каждой зоны
   plotOptions: {
@@ -475,16 +710,16 @@ let options3 = ref({
       }
     }
   },
-  labels: ['25%','50%', '75%', "100%"],
+  labels: ['25%', '50%', '75%', "100%"],
   dataLabels: {
     offsetY: 50,
-    formatter: function (val,opts) {
+    formatter: function (val, opts) {
       return opts.w.config.labels[opts.seriesIndex]
     },
     dropShadow: false,
     style: {
       fontSize: '12px',
-      colors:['#fff'],
+      colors: ['#fff'],
       top: '50px'
     }
   },
@@ -497,46 +732,46 @@ let options3 = ref({
       {
         x: -135,
         y: 25,
-        marker: { size: 0 },
+        marker: {size: 0},
         label: {
           borderColor: '#777',
           offsetY: -20,
           offsetX: -30,
-          style: { color: '#777', background: '#fff' },
+          style: {color: '#777', background: '#fff'},
           text: '25%'
         }
       },
       {
         x: -45,
         y: 50,
-        marker: { size: 0 },
+        marker: {size: 0},
         label: {
           borderColor: '#777',
           offsetY: -30,
-          style: { color: '#777', background: '#fff' },
+          style: {color: '#777', background: '#fff'},
           text: '50%'
         }
       },
       {
         x: 45,
         y: 75,
-        marker: { size: 0 },
+        marker: {size: 0},
         label: {
           borderColor: '#777',
           offsetY: -30,
-          style: { color: '#777', background: '#fff' },
+          style: {color: '#777', background: '#fff'},
           text: '75%'
         }
       },
       {
         x: 135,
         y: 100,
-        marker: { size: 0 },
+        marker: {size: 0},
         label: {
           borderColor: '#777',
           offsetY: -20,
           offsetX: 30,
-          style: { color: '#777', background: '#fff' },
+          style: {color: '#777', background: '#fff'},
           text: '100%'
         }
       }
@@ -549,6 +784,27 @@ let options3 = ref({
 </script>
 
 <style scoped>
+.arrow {
+  width: 50px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("./arrow.png");
+  background-position: center;
+  position: absolute;
+  bottom: 175px;
+  transform-origin: 50% 90%;
+  //animation: rotate 7s ease-in-out infinite alternate;
+}
+
+.card {
+  border-radius: 200px;
+}
+
+.container {
+  margin: 40px auto;
+  max-width: 1280px;
+}
 
 .text11 {
   color: red;
