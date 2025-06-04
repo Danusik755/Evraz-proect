@@ -6,8 +6,8 @@
           <div class="col-6">
             <q-card
               class="my-card text-white full-height"
-              style="background:rgba(12, 37, 61, .95)">
-
+              style="background:rgba(12, 37, 61, .95)"
+            >
               <q-card-section class="card">
                 <div class="text-h6">ПРОСРОЧЕННЫЕ ЗАДАЧИ</div>
                 <div class="textnumber">52</div>
@@ -53,9 +53,8 @@
           <div class="col-6">
             <q-card
               class="my-card text-white full-height"
-              style="background: rgba(12, 37, 61, .95)">
-
-
+              style="background: rgba(12, 37, 61, .95)"
+            >
               <q-card-section
                 class="card">
                 <div class="text-h6">СДЕЛОК БЕЗ ЗАДАЧ</div>
@@ -79,7 +78,6 @@
           class="my-card text-white full-height"
           style="background: rgba(12, 37, 61, .95)"
         >
-
           <q-card-section class="card">
             <div class="text-h6">ИСТОЧНИКИ СДЕЛОК</div>
             <div class="flex flex-center">
@@ -107,11 +105,11 @@
               </div>
 
               <div>
-                  <div
-                    class="textnumber2 text-right">+8
-                  </div>
-                  <div class="row-q-gutter-xs">за неделю</div>
+                <div
+                  class="textnumber2 text-right">+8
                 </div>
+                <div class="row-q-gutter-xs">за неделю</div>
+              </div>
             </div>
 
             <div style='width: 50%;'>
@@ -231,401 +229,165 @@
         </q-card>
       </div>
 
+      <div class="col-4">
+        <q-card
+          class="my-card text-white "
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section
+            style="width: 400px"
+            class="card3">
+            <div class="text-h6">ЦЕЛИ</div>
+            <div class="flex flex-center">
+              <apexchart type="donut" height='325' width='340' :options="options3" :series="series3"/>
+              <div class="arrow"></div>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
 
+      <div class="col-4 ">
+        <q-card
+          class="my-card text-white full-height"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section
+            style="width: 400px"
+            class="card4">
+            <div
+              class="text-h6">ИСПОЛЬЗОВАНИЕ СИСТЕМЫ ЗА НЕДЕЛЮ
+            </div>
+            <div
+              style="display: flex; justify-content: flex-end"
+              class="textnumber20">За неделю
+            </div>
+            <div
+              style="margin-top: 20px"
+              class="row q-gutter-xs">
+              <img
+                class="image"
+                style="width:30px"
+                src="https://avatars.mds.yandex.net/get-socsnippets/12856884/2a0000019158c1fcb75dc89d8e6c6fec8753/square_83">
+              <div>Admin CRM</div>
+              <div
+                style="font-weight: bold"
+                class="row q-gutter-xs"></div>
+              <div style="font-weight: bold">7 м.</div>
+              <div
+                class="text11">28 м.
+              </div>
+              <q-linear-progress :value="0" color="yellow" class="line"></q-linear-progress>
+              <img
+                class="img"
+                style="width:30px"
+                src="https://avatars.mds.yandex.net/i?id=9f64755eec4927fe8ba29cbd5d1a3749d82fcdae-3590262-images-thumbs&n=13">
+              <div class="row q-gutter-xs">Валерий Богинский</div>
+              <div
+                style="font-weight: bold"
+                class="row q-gutter-xs">2 м.
+              </div>
+              <div
+                class="text12">13 м.
+              </div>
+              <q-linear-progress :value="0" color="black" class="line"></q-linear-progress>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
 
+      <div class="col-4">
+        <q-card
+          class="my-card text-white full-height"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section
+            style="width: 400px"
+            class="row-q-gutter-xs">
+            <div class="text-h6">ПОСЛЕДНИЕ ФАЙЛЫ</div>
+            <div
+              style="font-weight: bold"
+              class="row q-mb-md">
+              <img
+                style="width: 50px"
+                src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
+                class="q-mr-sm"
+              >
+              Доходы "ЕВРАЗ"
+            </div>
+            <div
+              style="font-weight: bold"
+              class="row q-gutter-xs">
+            </div>
 
-  <!--            <div-->
-  <!--              style="margin-bottom: 10px"-->
-  <!--              class="row q-gutter-xs">-->
-  <!--              <div class="textnumber6">Иван Седых</div>-->
-  <!--              <div style="font-weight: bold"> 151 сделок</div>-->
-  <!--              <div-->
-  <!--                style="opacity: 0.3"-->
-  <!--                class="textnumber3">(0 ₽)-->
-  <!--              </div>-->
-  <!--              <div-->
-  <!--                class="textnumber2"-->
-  <!--                style="margin-left: 263px">0-->
-  <!--              </div>-->
-  <!--              <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>-->
-  <!--            </div>-->
-  <!--            <div-->
-  <!--              style="margin-bottom: 10px"-->
-  <!--              class="row q-gutter-xs">-->
-  <!--              <div class="textnumber6">Александр Михайлов</div>-->
-  <!--              <div style="font-weight: bold"> 146 сделок</div>-->
-  <!--              <div-->
-  <!--                style="opacity: 0.3"-->
-  <!--                class="textnumber3">(0 ₽)-->
-  <!--              </div>-->
-  <!--              <div-->
-  <!--                class="textnumber2"-->
-  <!--                style="margin-left: 196px">+2-->
-  <!--              </div>-->
-  <!--              <q-linear-progress :value="0.04" color="yellow" class="line"></q-linear-progress>-->
-  <!--            </div>-->
-  <!--            <div-->
-  <!--              style="margin-bottom: 10px"-->
-  <!--              class="row q-gutter-xs">-->
-  <!--              <div class="textnumber6">Ксения Евдокимова</div>-->
-  <!--              <div style="font-weight: bold"> 89 сделок</div>-->
-  <!--              <div-->
-  <!--                style="opacity: 0.3"-->
-  <!--                class="textnumber3">(0 ₽)-->
-  <!--              </div>-->
-  <!--              <div-->
-  <!--                class="textnumber2"-->
-  <!--                style="margin-left: 220px">0-->
-  <!--              </div>-->
-  <!--              <q-linear-progress :value="0.02" color="yellow" class="line"></q-linear-progress>-->
-  <!--            </div>-->
-  <!--            <div-->
-  <!--              style="margin-bottom: 10px"-->
-  <!--              class="row q-gutter-xs">-->
-  <!--              <div class="textnumber6">Елизавета Ткачева</div>-->
-  <!--              <div style="font-weight: bold"> 43 сделок</div>-->
-  <!--              <div-->
-  <!--                style="opacity: 0.3"-->
-  <!--                class="textnumber3">(0 ₽)-->
-  <!--              </div>-->
-  <!--              <div-->
-  <!--                class="textnumber2"-->
-  <!--                style="margin-left: 224px">0-->
-  <!--              </div>-->
-  <!--              <q-linear-progress :value="0.01" color="yellow" class="line"></q-linear-progress>-->
-  <!--            </div>-->
-  <!--            <div-->
-  <!--              style="margin-bottom: 10px"-->
-  <!--              class="row q-gutter-xs  ">-->
-  <!--              <div class="textnumber6">Другие</div>-->
-  <!--              <div style="font-weight: bold"> 32 сделок</div>-->
-  <!--              <div-->
-  <!--                style="opacity: 0.3"-->
-  <!--                class="textnumber3">(0 ₽)-->
-  <!--              </div>-->
-  <!--              <div-->
-  <!--                class="textnumber2"-->
-  <!--                style="margin-left: 303px">0-->
-  <!--              </div>-->
-  <!--              <q-linear-progress :value="0.008" color="yellow" class="line"></q-linear-progress>-->
-  <!--            </div>-->
-  <!--          </q-card-section>-->
-  <!--        </q-card>-->
-  <!--      </div>-->
+            <div
+              style="font-weight: bold"
+              class="row q-mb-md">
+              <img
+                style="width: 50px"
+                src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
+                class="q-mr-sm"
+              >
+              Задачи "ЕВРАЗ"
+            </div>
+            <div
+              style="font-weight: bold"
+              class="row q-gutter-xs">
+            </div>
 
-  <div class="col-4">
-    <q-card
-      class="my-card text-white "
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="width: 400px"
-        class="card3">
-        <div class="text-h6">ЦЕЛИ</div>
-        <div class="flex flex-center">
-          <apexchart type="donut" height='325' width='340' :options="options3" :series="series3"/>
-          <div class="arrow"></div>
-        </div>
-      </q-card-section>
-    </q-card>
-  </div>
+            <div
+              style="font-weight: bold"
+              class="row q-mb-md">
+              <img
+                style="width: 50px"
+                src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
+                class="q-mr-sm">
+              Работники "ЕВРАЗ"
+            </div>
+            <div
+              style="font-weight: bold"
+              class="row q-gutter-xs"></div>
 
-  <div class="col-4 ">
-    <q-card
-      class="my-card text-white full-height"
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="width: 400px"
-        class="card4">
-        <div
-          class="text-h6">ИСПОЛЬЗОВАНИЕ СИСТЕМЫ ЗА НЕДЕЛЮ
-        </div>
-        <div
-          style="display: flex; justify-content: flex-end"
-          class="textnumber20">За неделю
-        </div>
-        <div
-          style="margin-top: 20px"
-          class="row q-gutter-xs">
-          <img
-            class="image"
-            style="width:30px"
-            src="https://avatars.mds.yandex.net/get-socsnippets/12856884/2a0000019158c1fcb75dc89d8e6c6fec8753/square_83">
-          <div>Admin CRM</div>
-          <div
-            style="font-weight: bold"
-            class="row q-gutter-xs"></div>
-          <div style="font-weight: bold">7 м.</div>
-          <div
-            class="text11">28 м.
-          </div>
-          <q-linear-progress :value="0" color="yellow" class="line"></q-linear-progress>
-          <img
-            class="img"
-            style="width:30px"
-            src="https://avatars.mds.yandex.net/i?id=9f64755eec4927fe8ba29cbd5d1a3749d82fcdae-3590262-images-thumbs&n=13">
-          <div class="row q-gutter-xs">Валерий Богинский</div>
-          <div
-            style="font-weight: bold"
-            class="row q-gutter-xs">2 м.
-          </div>
-          <div
-            class="text12">13 м.
-          </div>
-          <q-linear-progress :value="0" color="black" class="line"></q-linear-progress>
-        </div>
-      </q-card-section>
-    </q-card>
-  </div>
+            <div
+              style="font-weight: bold"
+              class="row q-mb-md">
+              <img
+                style="width: 50px"
+                src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
+                class="q-mr-sm"
+              >
+              Важная информация "ЕВРАЗ"
+            </div>
+            <div
+              style="font-weight: bold"
+              class="row q-gutter-xs"></div>
 
-  <div class="col-4">
-    <q-card
-      class="my-card text-white full-height"
-      style="background: rgba(12, 37, 61, .95)"
-    >
-      <q-card-section
-        style="width: 400px"
-        class="row-q-gutter-xs">
-        <div class="text-h6">ПОСЛЕДНИЕ ФАЙЛЫ</div>
-        <div
-          style="font-weight: bold"
-          class="row q-mb-md">
-          <img
-            style="width: 50px"
-            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
-            class="q-mr-sm"
-          >
-          Доходы "ЕВРАЗ"
-        </div>
-        <div
-          style="font-weight: bold"
-          class="row q-gutter-xs">
-        </div>
+            <div
+              style="font-weight: bold"
+              class="row q-mb-md">
+              <img
+                style="width: 50px"
+                src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
+                class="q-mr-sm"
+              >
+              Секреты "ЕВРАЗ"
+            </div>
+            <div
+              style="font-weight: bold"
+              class="row q-gutter-xs"></div>
 
-        <div
-          style="font-weight: bold"
-          class="row q-mb-md">
-          <img
-            style="width: 50px"
-            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
-            class="q-mr-sm"
-          >
-          Задачи "ЕВРАЗ"
-        </div>
-        <div
-          style="font-weight: bold"
-          class="row q-gutter-xs">
-        </div>
-
-        <div
-          style="font-weight: bold"
-          class="row q-mb-md">
-          <img
-            style="width: 50px"
-            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
-            class="q-mr-sm">
-          Работники "ЕВРАЗ"
-        </div>
-        <div
-          style="font-weight: bold"
-          class="row q-gutter-xs"></div>
-
-        <div
-          style="font-weight: bold"
-          class="row q-mb-md">
-          <img
-            style="width: 50px"
-            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
-            class="q-mr-sm"
-          >
-          Важная информация "ЕВРАЗ"
-        </div>
-        <div
-          style="font-weight: bold"
-          class="row q-gutter-xs"></div>
-
-        <div
-          style="font-weight: bold"
-          class="row q-mb-md">
-          <img
-            style="width: 50px"
-            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
-            class="q-mr-sm"
-          >
-          Секреты "ЕВРАЗ"
-        </div>
-        <div
-          style="font-weight: bold"
-          class="row q-gutter-xs"></div>
-
-        <div
-          style="font-weight: bold"
-          class="row q-mb-md">
-          <img
-            style="width: 50px"
-            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
-            class="q-mr-sm"
-          >
-          База данных "ЕВРАЗ"
-        </div>
-      </q-card-section>
-    </q-card>
-  </div>
-
-
-  <!--  <div class="row justify-center items-start q-gutter-md">-->
-
-  <!--    -->
-  <!--    -->
-
-
-  <!--    <q-card-->
-  <!--      class="my-card text-white"-->
-  <!--      style="background: rgba(12, 37, 61, .95)"-->
-  <!--    >-->
-  <!--      <q-card-section-->
-  <!--        style="width: 400px"-->
-  <!--        class="row-q-gutter-xs">-->
-  <!--        <div class="text-h6">ПОСЛЕДНИЕ ФАЙЛЫ</div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-mb-md">-->
-  <!--          <img-->
-  <!--            style="width: 50px"-->
-  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
-  <!--            class="q-mr-sm"-->
-  <!--          >-->
-  <!--          Доходы "ЕВРАЗ"-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-gutter-xs">-->
-  <!--        </div>-->
-
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-mb-md">-->
-  <!--          <img-->
-  <!--            style="width: 50px"-->
-  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
-  <!--            class="q-mr-sm"-->
-  <!--          >-->
-  <!--          Задачи "ЕВРАЗ"-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-gutter-xs">-->
-  <!--        </div>-->
-
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-mb-md">-->
-  <!--          <img-->
-  <!--            style="width: 50px"-->
-  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
-  <!--            class="q-mr-sm">-->
-  <!--          Работники "ЕВРАЗ"-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-gutter-xs"></div>-->
-
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-mb-md">-->
-  <!--          <img-->
-  <!--            style="width: 50px"-->
-  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
-  <!--            class="q-mr-sm"-->
-  <!--          >-->
-  <!--          Важная информация "ЕВРАЗ"-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-gutter-xs"></div>-->
-
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-mb-md">-->
-  <!--          <img-->
-  <!--            style="width: 50px"-->
-  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
-  <!--            class="q-mr-sm"-->
-  <!--          >-->
-  <!--          Секреты "ЕВРАЗ"-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-gutter-xs"></div>-->
-
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-mb-md">-->
-  <!--          <img-->
-  <!--            style="width: 50px"-->
-  <!--            src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"-->
-  <!--            class="q-mr-sm"-->
-  <!--          >-->
-  <!--          База данных "ЕВРАЗ"-->
-  <!--        </div>-->
-  <!--        <div-->
-  <!--          style="font-weight: bold"-->
-  <!--          class="row q-gutter-xs">-->
-  <!--        </div>-->
-  <!--      </q-card-section>-->
-  <!--    </q-card>-->
-  <!--    <q-card bordered class="bg-dark text-white my-card">-->
-  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
-  <!--        <div class="text-h5">ВХОДЯЩИЕ ЗВОНКИ</div>-->
-  <!--        <div class="text-number1">5</div>-->
-  <!--        <div class="text-subtitle3">за неделю</div>-->
-  <!--      </q-card-section>-->
-  <!--    </q-card>-->
-  <!--    <q-card-->
-  <!--      style="background: rgba(12, 37, 61, .95)"-->
-  <!--      class="bg-dark text-white my-card">-->
-  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
-  <!--        <div class="text-h5">ИСХОДЯЩИЕ ЗВОНКИ</div>-->
-  <!--        <div class="text-number2">5</div>-->
-  <!--        <div class="text-subtitle4">за неделю</div>-->
-  <!--      </q-card-section>-->
-  <!--    </q-card>-->
-  <!--    <q-card-->
-  <!--      style="background: rgba(12, 37, 61, .95)"-->
-  <!--      class="bg-dark text-white my-card">-->
-  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
-  <!--        <div class="text-h5">ПРИМЕЧАНИЙ</div>-->
-  <!--        <div class="text-number3">5</div>-->
-  <!--        <div class="text-subtitle3">за неделю</div>-->
-  <!--      </q-card-section>-->
-  <!--    </q-card>-->
-
-  <!--    <q-card class="bg-dark text-white my-card">-->
-  <!--      <q-card-section style="background: rgba(12, 37, 61, .95)">-->
-  <!--        <div class="text-h5">УСПЕШНЫЕ СДЕЛКИ</div>-->
-  <!--        <div class="text-number4">3082</div>-->
-  <!--        <div class="text-subtitle4"></div>-->
-  <!--        <div style="font-size:25px">0р</div>-->
-  <!--        <div style="width: 50%;">-->
-  <!--          <hr>-->
-  <!--        </div>-->
-  <!--        <div class="text-number10 " style="font-size: 30px">+10</div>-->
-  <!--        <div class="text-subtitle1">за неделю</div>-->
-  <!--      </q-card-section>-->
-  <!--    </q-card>-->
-
-
-  <!--    <q-card flat class="my-card">-->
-  <!--      <q-card-section>-->
-  <!--      </q-card-section>-->
-  <!--      <q-card>-->
-
-
-  <!--      </q-card>-->
-
-
-  <!--    </q-card>-->
+            <div
+              style="font-weight: bold"
+              class="row q-mb-md">
+              <img
+                style="width: 50px"
+                src="https://avatars.mds.yandex.net/i?id=85e05f3c027cadf9e1d8a614850ed524a9a8bd66-9068341-images-thumbs&n=13"
+                class="q-mr-sm"
+              >
+              База данных "ЕВРАЗ"
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
     </div>
   </div>
 </template>
