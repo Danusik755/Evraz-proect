@@ -1,12 +1,15 @@
 <template>
   <div class="container">
+    <div class="vdelo">
+      vdelocrm
+    </div>
     <div class="row items-stretch q-col-gutter-md">
-      <div class="col-4 full-height">
-        <div class="row q-col-gutter-md full-height">
-          <div class="col-6">
+      <div class="col-4">
+        <div class="flex full-height" style="gap: 16px;">
+          <div style="flex: 1;">
             <q-card
               class="my-card text-white full-height"
-              style="background:rgba(12, 37, 61, .95)"
+              style="background:rgba(12, 37, 61, .95);"
             >
               <q-card-section class="card">
                 <div class="text-h6">ПРОСРОЧЕННЫЕ ЗАДАЧИ</div>
@@ -20,10 +23,10 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-6">
+          <div style="flex: 1;">
             <q-card
               class="my-card text-white full-height"
-              style="background: rgba(12, 37, 61, .95)"
+              style="background: rgba(12, 37, 61, .95);"
             >
               <q-card-section
                 class="card">
@@ -33,10 +36,10 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-6">
+          <div style="flex: 1;">
             <q-card
               class="my-card text-white full-height"
-              style="background: rgba(12, 37, 61, .95)"
+              style="background: rgba(12, 37, 61, .95);"
             >
               <q-card-section
                 class="card">
@@ -50,10 +53,10 @@
               </q-card-section>
             </q-card>
           </div>
-          <div class="col-6">
+          <div style="flex: 1;">
             <q-card
-              class="my-card text-white full-height"
-              style="background: rgba(12, 37, 61, .95)"
+              class="my-card text-white full-width full-height"
+              style="background: rgba(12, 37, 61, .95);"
             >
               <q-card-section
                 class="card">
@@ -239,7 +242,7 @@
             class="card3">
             <div class="text-h6">ЦЕЛИ</div>
             <div class="flex flex-center">
-              <apexchart type="donut" height='325' width='340' :options="options3" :series="series3"/>
+              <apexchart type="donut" height='325' width='340' :options="options5" :series="series5"/>
               <div class="arrow"></div>
             </div>
           </q-card-section>
@@ -388,134 +391,188 @@
           </q-card-section>
         </q-card>
       </div>
-    </div>
-    <div class="row justify-center">
-      <q-card bordered class="bg-dark text-white my-card">
-        <q-card-section>
-          <div class="text-h5">Входящие звонки</div>
-          <div class="text-number1">5</div>
-          <div class="text-subtitle3">за неделю</div>
-        </q-card-section>
-      </q-card>
-      <q-card class="bg-dark text-white my-card">
-        <q-card-section>
-          <div class="text-h5">исходящие звонки</div>
-          <div class="text-number2">5</div>
-          <div class="text-subtitle4">за неделю</div>
-        </q-card-section>
-      </q-card>
-      <q-card class="bg-dark text-white my-card">
-        <q-card-section>
-          <div class="text-h5">примечаний</div>
-          <div class="text-number3">5</div>
-          <div class="text-subtitle3">за неделю</div>
-        </q-card-section>
-      </q-card>
 
-      <q-card   class="bg-dark text-white my-card">
-        <q-card-section>
+      <div class="col-8">
+        <q-card
+          class="text-white my-card"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section>
+            <apexchart type="line" height="480" :options="options3" :series="series3"/>
+          </q-card-section>
+        </q-card>
+      </div>
 
-          <div class="text-h5">успешные сделки</div>
-          <div class="text-number4">3  082</div>
-          <div class="text-subtitle4"></div>
-          <div style="font-size:25px">0 р</div>
-          <div style="width: 50%;">
-            <hr>
-          </div>
-          <div  class="text-number1 "  style="font-size: 30px">+10</div>
-          <div class="text-subtitle1">за неделю</div>
-        </q-card-section>
-      </q-card>
-      <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
-        <q-card-section>
-          <div>
-            <div class="text-h5">исходящие сообщения по менеджерам</div>
-            <div style="display:flex;justify-content: flex-end;"class="text-number42" >0</div>
-            <div
-              style="display:flex;justify-content: flex-end;"
-              class="text-subtitle1">за неделю</div>
-          </div>
-          <div style="width: 20%">
-            <hr>
-
+      <div class="col-4">
+        <div class="flex full-height" style="gap: 16px;">
+          <div style="width: 48%;">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)"
+            >
+              <q-card-section class="card">
+                <div class="text-h5">ВХОДЯЩИЕ ЗВОНКИ</div>
+                <div
+                  style="color: limegreen"
+                  class="textnumber">5
+                </div>
+                <div class="text-subtitle3">за неделю</div>
+              </q-card-section>
+            </q-card>
           </div>
 
-
-
-
-        </q-card-section>
-      </q-card>
-
-      <q-card-section>
-        <apexchart type="line"          width='1000' height="500" :options="options5" :series="series5"/>
-      </q-card-section>
-
-
-
-
-
-
-
-
-      <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
-        <q-card-section>
-          <div class="text-h5">Обработанные беседы</div>
-          <div style="display:flex;justify-content: flex-end;" class="text-number42" >0</div>
-          <div
-            style="display:flex;justify-content: flex-end;"
-            class="text-subtitle1">за неделю
+          <div style="width: 48%;">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)"
+            >
+              <q-card-section class="card">
+                <div class="text-h5">ИСХОДЯЩИЕ ЗВОНКИ</div>
+                <div
+                  style="color: limegreen"
+                  class="textnumber">5
+                </div>
+                <div class="text-subtitle4">за неделю</div>
+              </q-card-section>
+            </q-card>
           </div>
-          <div style="width: 20%">
-            <hr>
 
+          <div style="width: 48%;">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)"
+            >
+              <q-card-section class="card">
+                <div class="text-h5">ПРИМЕЧАНИЙ</div>
+                <div
+                  style="color: limegreen"
+                  class="textnumber">5
+                </div>
+                <div class="text-subtitle3">за неделю</div>
+              </q-card-section>
+            </q-card>
           </div>
-        </q-card-section>
-      </q-card>
 
+          <div style="width: 48%;">
+            <q-card
+              class="my-card text-white full-height"
+              style="background: rgba(12, 37, 61, .95)"
+            >
+              <q-card-section class="card">
+                <div class="text-h5">УСПЕШНЫЕ СДЕЛКИ</div>
+                <div
+                  class="textnumber">3082
+                </div>
+                <div class="textnumber11" style="font-weight: bold">0 ₽</div>
+                <div style="width: 50%;">
+                  <hr>
+                </div>
+                <div class="textnumber2">+10</div>
+                <div class="text-subtitle2">за неделю</div>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </div>
 
-
-
-      <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
-        <q-card-section>
-          <div>
-            <div class="text-h5">Входящиесообщения</div>
-            <div style="display:flex;justify-content: flex-end;" class="text-number42" >0</div>
-            <div
-              style="display:flex;justify-content: flex-end;"
-              class="text-subtitle1">за неделю
+      <div class="col-4">
+        <q-card
+          style="background: rgba(12, 37, 61, .95);"
+          class="text-white my-card full-height"
+        >
+          <q-card-section>
+            <div>
+              <div class="text-h5">ИНДЕКС ПОТРЕБИТЕЛЬСКОЙ ЛОЯЛЬНОСТИ (NPS)</div>
             </div>
             <div style="width: 20%">
-              <hr style="opacity: 5%; height: auto">
+              <hr style="opacity: 5%">
             </div>
-          </div>
-        </q-card-section>
-      </q-card>
-      <q-card style="background: #1D1D1D" class="bg-dark1 text-white my-card">
-        <q-card-section>
-          <div>
-            <div class="text-h5">Среднее время ответа</div>
+
+            <apexchart type="radialBar" height="350" :options="options4" :series="series4"></apexchart>
+            <div>
+              <div style="color: white">*NPS позволяет оценить уровень удовлетворенности клиентов Формула расчета: %
+                Сторонников - % Критиков
+              </div>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+
+      <div class="col-4">
+        <q-card
+          class="text-white my-card full-height"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section>
+            <div>
+              <div class="text-h5">ИСХОДЯЩИЕ СООБЩЕНИЯ ПО МЕНЕДЖЕРАМ</div>
+              <div style="display:flex;justify-content: flex-end;color: limegreen"
+                   class="textnumber">0
+              </div>
+              <div
+                style="display:flex;justify-content: flex-end;"
+                class="text-subtitle2">за неделю
+              </div>
+            </div>
             <div style="width: 20%">
+              <hr>
             </div>
-          </div>
-        </q-card-section>
-      </q-card>
+          </q-card-section>
+        </q-card>
+      </div>
 
+      <div class="col-4">
+        <q-card
+          class="text-white my-card full-height"
+          style="background: rgba(12, 37, 61, .95)"
+        >
+          <q-card-section>
+            <div class="text-h5">ОБРАБОТАННЫЕ БЕСЕДЫ</div>
+            <div style="display:flex;justify-content: flex-end;color: limegreen"
+                 class="textnumber">0
+            </div>
+            <div
+              style="display:flex;justify-content: flex-end;"
+              class="text-subtitle2">за неделю
+            </div>
+            <div style="width: 20%">
+              <hr>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+
+      <div class="col-4">
+        <q-card
+          class="text-white my-card"
+          style="background: rgba(12, 37, 61, .95); height: 400px;"
+        >
+          <q-card-section>
+            <div>
+              <div class="text-h5">ВХОДЯЩИЕ СООБЩЕНИЯ</div>
+              <div style="width: 20%">
+                <hr style="opacity: 5%; height: auto">
+              </div>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
+
+      <div class="col-8">
+        <q-card
+          class="text-white my-card"
+          style="background: rgba(12, 37, 61, .95); height: 400px;"
+        >
+          <q-card-section>
+            <div>
+              <div class="text-h5">СРЕДНЕЕ ВРЕМЯ ОТВЕТА</div>
+              <div style="width: 20%">
+              </div>
+            </div>
+          </q-card-section>
+        </q-card>
+      </div>
     </div>
-    <q-card style="background: #1D1D1D; height: auto;" class="bg-dark1 text-white my-card">
-      <q-card-section>
-        <div>
-          <div class="text-h5">индекс потребительской лояльности(NPS)</div>
-        </div>
-        <div style="width: 20%">
-          <hr style="opacity: 5%">
-        </div>
-
-        <apexchart type="radialBar" height="350" :options="options4" :series="series4"></apexchart>
-        <div>
-          <div class="text-h5" style="opacity: 5%">*NPS позволяет оценить уровень удовлетворенности клиентов Формула расчета: %Сторонников - % Критков</div>
-        </div>
-      </q-card-section>
-    </q-card>
   </div>
 </template>
 
@@ -524,23 +581,35 @@
 import {ref} from 'vue';
 
 let options4 = {
-    chart: {
-      height: 200,
-      type: 'radialBar',
-    },
-    plotOptions: {
-      radialBar: {
-        hollow: {
-          size: '70%',
-        }
+  chart: {
+    height: 200,
+    type: 'radialBar',
+  },
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        size: '70%',
+      },
+      dataLabels: {
+        show: true,
+        name: {
+          show: true,
+          color: 'white',
+        },
+        value: {
+          show: true,
+          color: 'white'
+        },
       },
     },
-    labels: ['NPS*'],
-  }
+  },
+  labels: ['NPS*'],
+
+}
 
 let series4 = [70]
 
-let series2 = ref([100,100])
+let series2 = ref([100, 100])
 
 let options2 = ref({
   chart: {
@@ -597,7 +666,6 @@ let options5 = ref({
   chart: {
     height: 350,
     type: 'donut',
-    toolbar: {show: false}
   },
   colors: ['#8B0000', '#FF8C00', '#FFFF99', 'lime '], // Цвета для каждой зоны
   plotOptions: {
@@ -689,13 +757,15 @@ let options5 = ref({
 
 let series3 = ref([{
   name: "Desktops",
-  data: [0, 15, 30, ]
+  data: [0, 15, 30,]
 }])
 
-let options3= ref({
+let options3 = ref({
   chart: {
-
-    background: 'rgba(12,37,61,.95)',
+    toolbar: {
+      show: false
+    },
+    background: 'transparent',
     width: 500,
     height: 500,
     type: 'line',
@@ -713,20 +783,32 @@ let options3= ref({
     curve: 'straight'
   },
   title: {
-    text: 'прогноз продаж',
+    text: 'ПРОГНОЗ ПРОДАЖ',
     align: 'left',
-    color: '#666'
+    style: {
+      fontFamily: "PT Sans",
+      color: 'white'
+    },
   },
   grid: {
     row: {
-      colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-      opacity: 0.5
+      colors: ['transparent', 'transparent'], // takes an array which will be repeated on columns
     },
   },
   xaxis: {
+    categories: ['сделок в работе сейчас', 'по прошествии 5 дней '],
+    labels: {
+      show: true,
+      style: {
+        fontFamily: "PT Sans",
+        colors: ['white', 'white']
+      },
+      offsetX: 20,
+    },
 
-    categories: ['сделок в работе сейчас', 'по прошествии 5 дней ' ,'  ' ],
-
+  },
+  tooltip: {
+    enabled: false,
   }
 })
 </script>
@@ -843,10 +925,19 @@ let options3= ref({
   color: mediumpurple;
 }
 
-.card {
+.my-card {
+  border-radius: 10px;
+}
+
+.vdelo {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
 }
 
 .apexcharts-grid-row {
-  fill: rgba(12,37,61,.95);
+  fill: rgba(12, 37, 61, .95);
 }
 </style>
